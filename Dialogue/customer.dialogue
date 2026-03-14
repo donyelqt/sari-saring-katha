@@ -23,3 +23,15 @@ Kuya Kap: Salamat. I’ll be bystanding here for a while, don’t mind me.
 
 Kuya Kap: Hindi 'yan yung hinihingi ko eh...
 => END
+
+~ customer_returning
+
+Kuya Kap: Oy! Can I buy {{item_name}}?
+- Sure thing!
+=> END
+
+~ day_ended
+
+Kuya Kap: It's getting late na. See you tomorrow!
+- Good night, Kuya Kap!
+=> END
