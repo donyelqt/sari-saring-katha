@@ -26,9 +26,11 @@ pixel_size = 0.005
 billboard = 1
 
 [node name="ItemIcon" type="Sprite3D" parent="Bubble"]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0, 0.01)
-modulate = Color(1, 1, 1, 0.7)
-texture = ExtResource("2_icon")
+visible = false
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0.3, 0.1)
+pixel_size = 0.003
+billboard = 2
+modulate = Color(1, 1, 1, 1)
 
 [node name="RequestLabel" type="Label3D" parent="Bubble"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -50, 0.02)

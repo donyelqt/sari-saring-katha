@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bd5eug26jgy1o" path="res://Scripts/MainGame.gd" id="1_script"]
 [ext_resource type="PackedScene" uid="uid://bjb131wmtsean" path="res://Assets/untitled.dae" id="7_iuea6"]
 [ext_resource type="PackedScene" uid="uid://dialogueui123" path="res://Scenes/DialogueUI.tscn" id="8_dialogue"]
+[ext_resource type="PackedScene" uid="uid://itemselectionui" path="res://Scenes/ItemSelectionUI.tscn" id="9_itemui"]
+[ext_resource type="PackedScene" uid="uid://confirmationpopup" path="res://Scenes/ConfirmationPopup.tscn" id="10_confirmpopup"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1"]
 sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
@@ -72,3 +74,25 @@ transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -5.6184363, 0.421106
 [node name="AmbianceSounds" type="AudioStreamPlayer3D" parent="." unique_id=2042151354]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.87512, 22.729885, -1.856102)
 stream = SubResource("AudioStreamMP3_ktwve")
+
+[node name="ShelfButton" type="Button" parent="CanvasLayer"]
+offset_left = 20.0
+offset_top = 500.0
+offset_right = 150.0
+offset_bottom = 550.0
+text = "Shelf"
+
+[node name="HeldItemLabel" type="Label" parent="CanvasLayer"]
+offset_left = 20.0
+offset_top = 80.0
+offset_right = 250.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 24
+text = ""
+visible = false
+
+[node name="ItemSelectionUI" parent="." instance=ExtResource("9_itemui")]
+
+[node name="ConfirmationPopup" parent="." instance=ExtResource("10_confirmpopup")]
+
+
