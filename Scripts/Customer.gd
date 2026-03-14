@@ -4,6 +4,7 @@ extends Area3D
 signal satisfied
 signal left
 signal arrived(customer: Customer)
+signal clicked(customer: Customer)
 
 @export var movement_speed: float = 2.0
 var target_position: Vector3
@@ -17,6 +18,12 @@ var desire: ItemData
 
 func _ready() -> void:
 	bubble.visible = false
+	input_event.connect(_on_input_event)
+
+func _on_input_event(_camera: Node, event: InputEvent, _position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+			clicked.emit(self)
 
 func setup(data: ItemData, target: Vector3) -> void:
 	desire = data
